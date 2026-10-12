@@ -2,6 +2,14 @@ import 'dart:math';
 
 // Creation de la classe abstraite Forme
 
+abstract class Forme {
+  double calculerAire();
+
+  void afficherMessage() {
+    print("Calcule de l'aire d'une forme.");
+  }
+}
+
 class Cercle extends Forme {
   final double rayon;
 
