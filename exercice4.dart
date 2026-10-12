@@ -3,7 +3,10 @@ class Media {
 
   Media(this.titre);
 
-  
+  void afficherType() {
+    print("Ceci est un média.");
+  }
+}
 
 
 class Livre extends Media {
