@@ -1,18 +1,18 @@
-// creation de la classe  Livre
+// creation de la classe Livre
 
 class Livre {
   String titre;
   String auteur;
-  int annee;
+  int _pages;
 
   // Parametres statiques
 
-  static int nombreTotal = 0;
+  static int totalLivres = 0;
 
   // Constructeur
 
-  Livre(this.titre, this.auteur, this.annee) {
-    nombreTotal++;
+  Livre(this.titre, this.auteur, [int pages = 0]) : _pages = pages {
+    totalLivres++;
   }
 
   // Lire les pages du livre
@@ -23,14 +23,14 @@ class Livre {
 
   // afficher les informations
 
-  void afficherInformations() {
-    print("Titre: $titre, Auteur: $auteur, Année: $annee");
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur");
   }
 
   // Affichage du nombre total de livres methodes statiques
 
-  static void afficherNombreTotal() {
-    print("Nombre total de livres: $nombreTotal");
+  static void afficherTotal() {
+    print("Nombre total de livres: $totalLivres");
   }
 }
 
@@ -41,36 +41,4 @@ class Roman extends Livre {
 
   Roman(String titre, String auteur, this.genre) : super(titre, auteur);
 
-  // Affichage des informations du roman
-
-  void afficherGenre() {
-    afficherInformations();
-    print("Genre: $genre");
-  }
-}
-
-void main() {
-  // Creation des livres
-
-  var livre1 = Livre("Les Misérables", "Victor Hugo", 1862);
-  var livre2 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry", 1943);
-
-  livre1.afficherInformations();
-  print("Pages: ${livre1.pages}");
-  livre2.afficherInformations();
-
-  // Creation des romans
-  var roman1 = Roman(
-    "Le chien des Baskerville",
-    "Arthur Conan Doyle",
-    "Policier",
-  );
-  var roman2 = Roman("Orgueil et Préjugés", "Jane Austen", "Romance");
-
-  roman1.afficherGenre();
-  roman2.afficherGenre();
-
-  // Affichage du nombre total de livres
-
-  Livre.afficherNombreTotal();
-}
+  
