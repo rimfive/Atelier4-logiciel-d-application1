@@ -27,7 +27,11 @@ class Film extends Media {
   Film(String titre, this.dureeMinutes) : super(titre);
 
   @override
-  
+  void afficherType() {
+    print("Ceci est un film: $titre de $dureeMinutes minutes.");
+    }
+  }
+
 
 void main() {
   List<Media> catalogue = [];
