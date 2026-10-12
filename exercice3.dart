@@ -2,8 +2,8 @@
 
 class CompteBancaire {
   double _solde;
-  final String numeroCompte; h=
-
+  final String numeroCompte;
+=
 // Constructeur
   CompteBancaire( this.numeroCompte, [double solde = 0.0]) : _solde = solde; 
   
