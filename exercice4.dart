@@ -41,3 +41,7 @@ void main() {
   catalogue.add(Film("Titanic", 194));
   catalogue.add(Film("Inception", 148));
 
+  for (var media in catalogue) {
+    media.afficherType();
+  } 
+}
