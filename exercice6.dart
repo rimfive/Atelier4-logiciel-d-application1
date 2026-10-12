@@ -1,8 +1,6 @@
 // creation classe qui joue le role d'interface
 
-abstract class connexion {
-  void seConnecter(String utilisateur);
-  void seDeconnecter();
+
 }
 
 class ServerApi implements connexion {
