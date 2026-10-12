@@ -41,6 +41,10 @@ void main() {
   var cercle = Cercle(3);
   var rectangle = Rectangle(4, 5);
 
+  // Affichage des aires
+  cercle.afficherMessage();
+  print("Aire du cercle: ${cercle.calculerAire().toStringAsFixed(2)}");
+
   rectangle.afficherMessage();
   print("Aire du rectangle: ${rectangle.calculerAire()}");
 }
