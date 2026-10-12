@@ -48,3 +48,30 @@ class Roman extends Livre {
     print("Genre: $genre");
   }
 }
+
+void main() {
+  // Creation des livres
+
+  var livre1 = Livre("Les Misérables", "Victor Hugo", 200);
+  var livre2 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
+
+  livre1.afficherInfos();
+  print("Pages: ${livre1.pages}");
+  livre2.afficherInfos();
+
+  // Creation des romans
+
+  var roman1 = Roman(
+    "Le chien des Baskerville",
+    "Arthur Conan Doyle",
+    "Policier",
+  );
+  var roman2 = Roman("Orgueil et Préjugés", "Jane Austen", "Romance");
+
+  roman1.afficherGenre();
+  roman2.afficherGenre();
+
+  // Affichage du nombre total de livres
+
+  Livre.afficherTotal();
+}
