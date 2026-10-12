@@ -41,4 +41,10 @@ class Roman extends Livre {
 
   Roman(String titre, String auteur, this.genre) : super(titre, auteur);
 
-  
+  // Affichage des informations du roman
+
+  void afficherGenre() {
+    afficherInfos();
+    print("Genre: $genre");
+  }
+}
